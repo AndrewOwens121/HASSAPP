@@ -13,28 +13,47 @@
     tools:context="com.example.andrew.hassapp.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+    <ImageView
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Opening Screen"
+        android:text="Welcome to HASSAPP!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="194dp"
-        android:id="@+id/message1" />
+        android:layout_marginTop="45dp"
+        android:id="@+id/abc1"
+        android:textSize="24sp" />
 
     <Button
-        android:text="Go To Tree"
+        android:text="HASSAPP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/message1"
-        android:layout_alignRight="@+id/message1"
-        android:layout_alignEnd="@+id/message1"
-        android:layout_marginTop="45dp"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/button2"
+        android:onClick="hassapp" />
+
+    <Button
+        android:text="Tutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/button"
-        android:onClick="Tree" />
+        android:layout_marginBottom="79dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="tutorial" />
+
 </RelativeLayout>
