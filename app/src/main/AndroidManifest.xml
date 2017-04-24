@@ -57,6 +57,26 @@
         <activity
             android:name=".Tree7"
             android:label="@string/title_activity_tree7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree8"
+            android:label="@string/title_activity_tree8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree9"
+            android:label="@string/title_activity_tree9"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree10"
+            android:label="@string/title_activity_tree10"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree11"
+            android:label="@string/title_activity_tree11"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HACCPLIST"
+            android:label="@string/title_activity_haccplist"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
