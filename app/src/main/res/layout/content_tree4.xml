@@ -13,4 +13,21 @@
     tools:context="com.example.andrew.hassapp.Tree4"
     tools:showIn="@layout/activity_tree4">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/i4"
+        android:id="@+id/imageView5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Is Your Business a Butcher Shop?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView5"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView6"
+        android:textSize="18sp" />
 </RelativeLayout>
