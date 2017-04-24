@@ -13,12 +13,22 @@
     tools:context="com.example.andrew.hassapp.Tree2"
     tools:showIn="@layout/tree2">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/i2"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
-        android:text="@string/title_activity_tree2"
+        android:text="Does Your Busines Sell Un-Cooked Foods?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="163dp"
-        android:id="@+id/tree2" />
+        android:id="@+id/textView4"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif" />
 </RelativeLayout>
