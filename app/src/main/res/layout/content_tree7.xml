@@ -13,4 +13,21 @@
     tools:context="com.example.andrew.hassapp.Tree7"
     tools:showIn="@layout/activity_tree7">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/i7"
+        android:id="@+id/imageView8"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Is your Business a Smoothie Shop?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView8"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView9"
+        android:textSize="18sp" />
 </RelativeLayout>
