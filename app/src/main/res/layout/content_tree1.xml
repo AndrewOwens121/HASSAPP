@@ -13,4 +13,22 @@
     tools:context="com.example.andrew.hassapp.Tree1"
     tools:showIn="@layout/tree1">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/i1"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Does Your Business Sell Food?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView3"
+        android:textSize="22sp" />
 </RelativeLayout>
