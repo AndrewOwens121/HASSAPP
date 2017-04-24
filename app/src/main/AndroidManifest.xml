@@ -41,6 +41,22 @@
         <activity
             android:name=".tutorial"
             android:label="@string/title_activity_tutorial"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree4"
+            android:label="@string/title_activity_tree4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree5"
+            android:label="@string/title_activity_tree5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree6"
+            android:label="@string/title_activity_tree6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tree7"
+            android:label="@string/title_activity_tree7"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
