@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    public void hassapp(){
-//        abc1.setText("Hassapp pressed");
-//    }
+    public void hassapp(View view){
+        Intent i = new Intent(this,Tree1.class);
+        startActivity(i);
+    }
 
     public void tutorial(View view){
         Intent i = new Intent(this,tutorial.class);

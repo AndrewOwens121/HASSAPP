@@ -35,7 +35,7 @@
             android:label="@string/title_activity_tree2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".tree3"
+            android:name=".Tree3"
             android:label="@string/title_activity_tree3"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
