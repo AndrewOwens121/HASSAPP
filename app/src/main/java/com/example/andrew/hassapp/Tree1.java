@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 public class Tree1 extends AppCompatActivity implements GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener{
 
+    private GestureDetectorCompat gestureDetector;
+    private static final int SWIPE_THRESHOLD = 100;
+    private static final int SWIPE_VELOCITY_THRESHOLD = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class Tree1 extends AppCompatActivity implements GestureDetector.OnGestur
         setContentView(R.layout.tree1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        this.gestureDetector = new GestureDetectorCompat(this,this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +77,48 @@ public class Tree1 extends AppCompatActivity implements GestureDetector.OnGestur
     }
 
     @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.gestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        return false;
+        boolean result = false;
+        try {
+            float diffY = e2.getY() - e1.getY();
+            float diffX = e2.getX() - e1.getX();
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
+                    if (diffX > 0) {
+                        onSwipeRight();
+                    } else {
+                        onSwipeLeft();
+                    }
+                    result = true;
+                }
+            }
+            else if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
+                if (diffY > 0) {
+                    //message1.setText("bottom");
+                } else {
+                    //message1.setText("top");
+                }
+                result = true;
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+        return result;
+    }
+    public void onSwipeRight() {
+        //message1.setText("swipe rigth");
+        Intent i = new Intent(this,Tree2.class);
+        startActivity(i);
+    }
+
+    public void onSwipeLeft() {
+        Intent i = new Intent(this,Tree3.class);
+        startActivity(i);
     }
 }
