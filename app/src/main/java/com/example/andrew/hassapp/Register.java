@@ -28,6 +28,7 @@ public class Register extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         final EditText regBusinessName = (EditText) findViewById(R.id.regBusinessName);
+        final EditText regEmail = (EditText) findViewById(R.id.regEmail);
         final EditText regUserName = (EditText) findViewById(R.id.regUserName);
         final EditText regPassword = (EditText) findViewById(R.id.regPassword);
         final Button regButton = (Button) findViewById(R.id.regButton);
@@ -36,10 +37,11 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final String businessname = regBusinessName.getText().toString();
+                final String email = regEmail.getText().toString();
                 final String username = regUserName.getText().toString();
                 final String password = regPassword.getText().toString();
 
-                Response.Listener<String> responseListener = new Response.Listener<String>(){
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
 
                     @Override
                     public void onResponse(String response) {
@@ -47,12 +49,12 @@ public class Register extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
 
-                            if(success){
-                                Intent intent = new Intent(Register.this,Login.class);
+                            if (success) {
+                                Intent intent = new Intent(Register.this, Login.class);
                                 Register.this.startActivity(intent);
-                            }else{
+                            } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
-                                builder.setMessage("Register Un-Successful").setNegativeButton("Retry",null).create().show();
+                                builder.setMessage("Register Un-Successful").setNegativeButton("Retry", null).create().show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -60,7 +62,7 @@ public class Register extends AppCompatActivity {
                     }
                 };
 
-                RegisterRequest registerRequest = new RegisterRequest(businessname,username,password,responseListener);
+                RegisterRequest registerRequest = new RegisterRequest(businessname, email, username, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Register.this);
                 queue.add(registerRequest);
             }
