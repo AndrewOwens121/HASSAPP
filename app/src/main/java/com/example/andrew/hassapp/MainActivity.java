@@ -30,12 +30,17 @@ public class MainActivity extends AppCompatActivity {
 
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        final TextView WelcomeMessage = (TextView) findViewById(R.id.WelcomeMessage);
 
         //getSupportActionBar().hide();
          //message1 = (TextView) findViewById(R.id.message1);
         //this.gestureDetector = new GestureDetectorCompat(this,this);
-
-
+        Intent intent = getIntent();
+        String businessname = intent.getStringExtra("businessname");
+        String username = intent.getStringExtra("username");
+        //Welcome String
+        String welcome = username + ", Welcome to HASSAPP";
+        WelcomeMessage.setText(welcome);
     }
 
     public void hassapp(View view){
