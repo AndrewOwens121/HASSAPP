@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class RegisterRequest extends StringRequest{
 
-    private static final String REGISTER_REQUEST_URL="https://hassapp.000webhostapp.com/register.php";
+    private static final String REGISTER_REQUEST_URL="http://192.168.0.17/WebD/HASSAPP/register.php";
     private Map<String, String> params;
 
     public RegisterRequest(String businessname,String username,String password , Response.Listener<String> listener){

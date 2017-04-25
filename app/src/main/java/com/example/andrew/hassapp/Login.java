@@ -20,7 +20,7 @@ public class Login extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);//Edit to change title text
         setSupportActionBar(toolbar);
 
-        final EditText etUsername = (EditText) findViewById(etUsername);
+        final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
 
 
@@ -29,7 +29,6 @@ public class Login extends AppCompatActivity {
     public void bReg(View view){
         Intent i = new Intent(this,Register.class);
         startActivity(i);
-        etU
     }
 
     public void logIn(View view){
