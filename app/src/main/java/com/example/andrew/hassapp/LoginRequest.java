@@ -1,8 +1,11 @@
 package com.example.andrew.hassapp;
 
-/**
- * Created by Andrew on 25/04/2017.
- */
+
+import java.util.Map;
 
 public class LoginRequest {
+
+
+    private static final String REGISTER_REQUEST_URL="http://192.168.0.17/WebD/HASSAPP/register.php";
+    private Map<String, String> params;
 }
