@@ -14,11 +14,22 @@
     tools:showIn="@layout/activity_tree10">
 
     <VideoView
-        android:id="@+id/tree8video"
-        android:layout_width="350dp"
-        android:layout_height="230dp"
+        android:id="@+id/tree10video"
+        android:layout_width="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_height="275dp" />
+
+    <Button
+        android:text="Download Document"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tree10button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/tree10video"
+        android:layout_alignEnd="@+id/tree10video" />
 
 </RelativeLayout>
