@@ -36,8 +36,6 @@ public class Login extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);//Edit to change title text
         setSupportActionBar(toolbar);
         final TextView tester = (TextView) findViewById(R.id.tester);
-        final String businessname="";
-        final String email="";
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bLogin = (Button) findViewById(R.id.bLogin);
@@ -53,18 +51,20 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
+                            //tester.setText(response);
+                            JSONObject jsonResponse1 = new JSONObject(response);
 
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
+                            boolean success = jsonResponse1.getBoolean("success");
 
                             if (success) {
-                                String businessname = jsonResponse.getString("businessname");
-                                String username = jsonResponse.getString("username");
+                                String businessname = jsonResponse1.getString("businessname");
+                                String username = jsonResponse1.getString("username");
 
                                 Intent intent = new Intent(Login.this, MainActivity.class);
                                 intent.putExtra("businessname", businessname);
                                 intent.putExtra("username", username);
                                 Login.this.startActivity(intent);
+
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                                 builder.setMessage("Login Failed").setNegativeButton("Retry", null).create().show();
@@ -72,14 +72,14 @@ public class Login extends AppCompatActivity {
 
                         } catch (JSONException e) {
 
-                            tester.setText("works");
+
                             e.printStackTrace();
                         }
                     }
                 };
 
 
-                LoginRequest loginrequest = new LoginRequest(businessname, email, username, password, responseListener);
+                LoginRequest loginrequest = new LoginRequest(username, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Login.this);
                 queue.add(loginrequest);
 

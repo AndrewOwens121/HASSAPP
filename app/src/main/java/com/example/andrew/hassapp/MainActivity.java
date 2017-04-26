@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        final TextView WelcomeMessage = (TextView) findViewById(R.id.WelcomeMessage);
+        final TextView Username = (TextView) findViewById(R.id.wUsername);
 
         //getSupportActionBar().hide();
          //message1 = (TextView) findViewById(R.id.message1);
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         String businessname = intent.getStringExtra("businessname");
         String username = intent.getStringExtra("username");
         //Welcome String
-        String welcome = username + ", Welcome to HASSAPP";
-        WelcomeMessage.setText(welcome);
+        String usernamemessage = username + ",";
+        Username.setText(usernamemessage);
     }
 
     public void hassapp(View view){
