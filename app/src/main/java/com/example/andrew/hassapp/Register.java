@@ -33,7 +33,7 @@ public class Register extends AppCompatActivity {
         final EditText regUserName = (EditText) findViewById(R.id.regUserName);
         final EditText regPassword = (EditText) findViewById(R.id.regPassword);
         final Button regButton = (Button) findViewById(R.id.regButton);
-        final TextView tester = (TextView) findViewById(R.id.tester);
+        //final TextView tester = (TextView) findViewById(R.id.tester);
 
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +62,7 @@ public class Register extends AppCompatActivity {
                                 builder.setMessage("Register Un-Successful").setNegativeButton("Retry", null).create().show();
                             }
                         } catch (JSONException e) {
-                            tester.setText("works");
+                            //tester.setText("works");
                             e.printStackTrace();
                         }
                     }
