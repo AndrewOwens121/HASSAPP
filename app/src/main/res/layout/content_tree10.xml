@@ -13,4 +13,12 @@
     tools:context="com.example.andrew.hassapp.Tree10"
     tools:showIn="@layout/activity_tree10">
 
+    <VideoView
+        android:id="@+id/tree8video"
+        android:layout_width="350dp"
+        android:layout_height="230dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
