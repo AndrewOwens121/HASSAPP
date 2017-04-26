@@ -19,26 +19,47 @@ Our content is a PDF document which the user prints out and a Tutorial video , b
 ##Screenshot's of My finished Assignment
 HomePage - Login screen
 ![alt tag](http://i.imgur.com/StQwU53.png)
+
 On click of the Dont Have an Account yet button you get sent to the Register Page
+
 ![alt tag](http://i.imgur.com/cnu6YOr.png) 
+
 Once registered You get sent back to the Login page where you can Log-in with your account details
+
 ![alt tag](http://i.imgur.com/TaBAVTU.png)
+
 You then get Brought to the Main Page , where you can choose HASSAPP to enter the decision tree or Tutorial to learn how the app works
+
 ![alt tag](http://i.imgur.com/EhAKWuB.png)
+
 On the tutorial page it tells you what were all about and how to use it.
+
 ![alt tag](http://i.imgur.com/JmGILgs.png)
+
 The Tutorial Page then sends you to the Decision Tree
+
 ![alt tag](http://i.imgur.com/iCFNdzr.png)
+
 Upon Swipe right(yes) or Left(no) to each question you get brought down a different path on the Tree , in this case swipe Yes
+
 ![alt tag](http://i.imgur.com/9qeP8J4.png)
+
 You get to the next stage of the Decision Tree with another question
+
 ![alt tag](http://i.imgur.com/9qeP8J4.png)
+
 When you hit the end of the decision tree It will ask you did we guess the right business
+
 ![alt tag](http://i.imgur.com/1mBK8Es.png)
+
 If yes you will be brought to a screen where you can download your HACCP documents and an instruction video given by an expert will carefully explain then to you and the reasoning behind them.
+
 ![alt tag](http://i.imgur.com/2EUoQuU.png)
+
 ![alt tag](http://i.imgur.com/FjkQd0b.png)
+
 If we guessed the business wrong you will be send to a list view of all the currently available Business we cater for 
+
 ![alt tag](http://i.imgur.com/wTp5Qfv.png)
 
 
