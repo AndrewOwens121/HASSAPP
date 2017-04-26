@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
 
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                                builder.setMessage("Login Failed").setNegativeButton("Retry", null).create().show();
+                                builder.setMessage("Login Failed , Details Incorrect").setNegativeButton("Retry", null).create().show();
                             }
 
                         } catch (JSONException e) {

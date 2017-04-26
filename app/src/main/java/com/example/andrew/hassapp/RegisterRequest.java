@@ -23,7 +23,7 @@ public class RegisterRequest extends StringRequest{
     }
 
     @Override
-    public Map<String, String> getParams() {
+    protected Map<String, String> getParams() {
         return params;
     }
 }

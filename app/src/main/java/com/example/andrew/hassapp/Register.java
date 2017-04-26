@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -32,6 +33,7 @@ public class Register extends AppCompatActivity {
         final EditText regUserName = (EditText) findViewById(R.id.regUserName);
         final EditText regPassword = (EditText) findViewById(R.id.regPassword);
         final Button regButton = (Button) findViewById(R.id.regButton);
+        final TextView tester = (TextView) findViewById(R.id.tester);
 
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,8 +48,11 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
+
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
+
+
 
                             if (success) {
                                 Intent intent = new Intent(Register.this, Login.class);
@@ -57,6 +62,7 @@ public class Register extends AppCompatActivity {
                                 builder.setMessage("Register Un-Successful").setNegativeButton("Retry", null).create().show();
                             }
                         } catch (JSONException e) {
+                            tester.setText("works");
                             e.printStackTrace();
                         }
                     }
