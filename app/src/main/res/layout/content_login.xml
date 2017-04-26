@@ -63,4 +63,13 @@
         android:layout_alignParentEnd="true"
         android:onClick="logIn" />
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:id="@+id/tester" />
+
 </RelativeLayout>

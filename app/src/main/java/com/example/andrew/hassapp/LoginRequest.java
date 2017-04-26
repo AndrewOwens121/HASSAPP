@@ -11,19 +11,22 @@ import java.util.Map;
 public class LoginRequest extends StringRequest {
 
 
-    private static final String Login_REQUEST_URL="http://192.168.0.17/WebD/HASSAPP/login.php";
+    private static final String LOGIN_REQUEST_URL="http://192.168.0.17/WebD/HASSAPP/login.php";
     private Map<String, String> params;
 
-    public LoginRequest(String username,String password , Response.Listener<String> listener) {
-        super(Request.Method.POST, Login_REQUEST_URL, listener, null);
+    public LoginRequest(String businessname,String email,String username,String password , Response.Listener<String> listener) {
+        super(Method.POST, LOGIN_REQUEST_URL, listener, null);
 
         params = new HashMap<>();
+        params.put("businessname",businessname);
+        params.put("email",email);
         params.put("username",username);
         params.put("password",password);
+
     }
 
     @Override
-    public Map<String, String> getParams() {
+    public Map<String,String> getParams() {
         return params;
     }
 
