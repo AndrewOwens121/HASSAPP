@@ -1,5 +1,6 @@
 package com.example.andrew.hassapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,7 +32,26 @@ public class HACCPLIST extends Activity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String food = String.valueOf(parent.getItemAtPosition(position));
+                        if(position ==0){
+                            Toast.makeText(HACCPLIST.this,"Butchers Selected",Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(HACCPLIST.this,Tree8.class);
+                            startActivity(i);
+                        }
+                        if(position == 1){
+                            Toast.makeText(HACCPLIST.this,"Deli/Restaurant Selected",Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(HACCPLIST.this,Tree9.class);
+                            startActivity(i);
+                        }
+                        if(position == 2){
+                            Toast.makeText(HACCPLIST.this,"Bar/Pub Selected",Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(HACCPLIST.this,Tree10.class);
+                            startActivity(i);
+                        }
+                        if(position == 3){
+                            Toast.makeText(HACCPLIST.this,"Smoothie Shop Selected",Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(HACCPLIST.this,Tree11.class);
+                            startActivity(i);
+                        }
                     }
                 }
 
