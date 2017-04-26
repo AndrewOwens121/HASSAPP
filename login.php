@@ -1,6 +1,6 @@
 <?php
     $con = mysqli_connect("localhost", "root", "", "hassapp");
-	 foreach ($_POST as $key => $value) {
+	 /*foreach ($_POST as $key => $value) {
         echo "<tr>";
         echo "<td>";
         echo $key;
@@ -9,9 +9,9 @@
         echo $value;
         echo "</td>";
         echo "</tr>";
-    }
-    //$username = $_POST["username"];
-    //$password = $_POST["password"];
+    }*/
+    $username = $_POST["username"];
+    $password = $_POST["password"];
     
     $statement = mysqli_prepare($con, "SELECT * FROM user WHERE username = ? AND password = ?");
     mysqli_stmt_bind_param($statement, "ss", $username, $password);
@@ -25,9 +25,9 @@
     
     while(mysqli_stmt_fetch($statement)){
         $response["success"] = true;  
-        //$response["businessname"] = $businessname;
+        $response["businessname"] = $businessname;
         //$response["email"] = $email;
-        //$response["username"] = $username;
+        $response["username"] = $username;
         //$response["password"] = $password;
     }
     
