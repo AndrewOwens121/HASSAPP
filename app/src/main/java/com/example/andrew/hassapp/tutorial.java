@@ -17,8 +17,8 @@ public class tutorial extends AppCompatActivity {
 
     }
 
-    public void hassap(){
-        Intent intent = new Intent(this,MainActivity.class);
+    public void hassapp(View view){
+        Intent intent = new Intent(tutorial.this,MainActivity.class);
         startActivity(intent);
     }
 

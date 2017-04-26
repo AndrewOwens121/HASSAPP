@@ -17,10 +17,4 @@
     <include layout="@layout/content_tree1"
         android:id="@+id/include" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="197dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/message1" />
-
 </android.support.design.widget.CoordinatorLayout>
