@@ -21,19 +21,8 @@ public class Tree4 extends AppCompatActivity implements GestureDetector.OnGestur
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree4);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         this.gestureDetector = new GestureDetectorCompat(this,this);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -73,12 +62,12 @@ public class Tree4 extends AppCompatActivity implements GestureDetector.OnGestur
     }
     public void onSwipeRight() {
         //message1.setText("swipe rigth");
-        Intent i = new Intent(this,Tree8.class);
+        Intent i = new Intent(Tree4.this,Tree8.class);
         startActivity(i);
     }
 
     public void onSwipeLeft() {
-        Intent i = new Intent(this,HACCPLIST.class);
+        Intent i = new Intent(Tree4.this,HACCPLIST.class);
         startActivity(i);
     }
     //Automatically Generated Code below

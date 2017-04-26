@@ -10,30 +10,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 public class Tree2 extends AppCompatActivity implements GestureDetector.OnGestureListener,GestureDetector.OnDoubleTapListener{
 
     private GestureDetectorCompat gestureDetector;
     private static final int SWIPE_THRESHOLD = 100;
     private static final int SWIPE_VELOCITY_THRESHOLD = 100;
+   // final TextView textview4 = (TextView) findViewById(R.id.textView4);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tree2);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         this.gestureDetector = new GestureDetectorCompat(this,this);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -73,12 +65,13 @@ public class Tree2 extends AppCompatActivity implements GestureDetector.OnGestur
     }
     public void onSwipeRight() {
         //message1.setText("swipe rigth");
-        Intent i = new Intent(this,Tree4.class);
+
+        Intent i = new Intent(Tree2.this,Tree4.class);
         startActivity(i);
     }
 
     public void onSwipeLeft() {
-        Intent i = new Intent(this,Tree5.class);
+        Intent i = new Intent(Tree2.this,Tree5.class);
         startActivity(i);
     }
 

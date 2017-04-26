@@ -13,15 +13,109 @@
     tools:context="com.example.andrew.hassapp.tutorial"
     tools:showIn="@layout/activity_tutorial">
 
+    <ImageView
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView12"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+
+    <TextView
+        android:text="HASSAPP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/textView"
+        android:textSize="32sp"
+        android:layout_alignBottom="@+id/imageView12"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Firstly , Welcome To HASSAPP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:text="Our Aim is to Provide your Buiness with Relavant HACCP Food Safety Records with A Video Tutorial Explaining How to Correctly Maintain HACCP compliance in your Business."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Objective"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textView11"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="In Order for us to Find out what type of Business you are We have Developed A decistion Tree , For each Question Swipe Right for Yes , and Swipe Left for No."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView13" />
+
     <TextView
         android:text="Tutorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/textView12"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="135dp"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="41dp"
-        android:id="@+id/textView" />
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:text="Disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textView14"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:text="We at HASSAPP are actively developing and Adding new Features and Business Types to our Product , so If you cannot find what youre looking for now , Please leave us some feedback with what you would like to see and we will do our best to fulfill your needs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView14"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView15" />
+
+    <Button
+        android:text="HASSAPP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bHassapp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="hassapp" />
 </RelativeLayout>

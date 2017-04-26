@@ -16,8 +16,7 @@ public class Tree8 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tree8);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         final VideoView tree8video = (VideoView) findViewById(R.id.tree8video);
         tree8video.setVideoPath("http://192.168.0.17/WebD/HASSAPP/video/tree8.mp4");
@@ -28,15 +27,6 @@ public class Tree8 extends AppCompatActivity {
         //starts video
         tree8video.start();
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
 }
